@@ -696,7 +696,7 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 
 /* mentor / big button ------------------------------------- */
 .tech-button-container { margin-bottom: 20px; }
-.tech-button-main {
+.centreos-dashboard .tech-button-main, .tech-button-main {
   background: linear-gradient(135deg, var(--c-primary), var(--c-primary-dim));
   color: var(--text-on-accent);
   border: 1px solid color-mix(in srgb, var(--c-primary) 60%, transparent);
@@ -707,12 +707,12 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
               0 4px 15px color-mix(in srgb, #000 30%, transparent);
   transition: box-shadow 0.25s ease, transform 0.12s ease, filter 0.2s ease;
 }
-.tech-button-main:hover {
+.centreos-dashboard .tech-button-main:hover, .tech-button-main:hover {
   filter: brightness(1.08);
   box-shadow: 0 0 26px color-mix(in srgb, var(--c-primary) 55%, transparent),
               0 8px 22px color-mix(in srgb, #000 35%, transparent);
 }
-.tech-button-main:active { transform: translateY(1px) scale(0.99); }
+.centreos-dashboard .tech-button-main:active, .tech-button-main:active { transform: translateY(1px) scale(0.99); }
 .mentor-message-box {
   background: var(--c-surface-low);
   border-left: 2px solid var(--c-primary);

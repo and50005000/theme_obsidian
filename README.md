@@ -19,6 +19,9 @@
 
 ## Changelog
 
+### 1.0.2
+- Селекторы кнопок уточнены (`.centreos-dashboard .tech-button-main`), чтобы стили Obsidian не перебивали тему — кнопка `OPEN_DAILY_NOTE` снова горит.
+
 ### 1.0.1
 - Кнопка `tech-button-main` (кнопка открытия daily-заметки) снова акцентная: градиент + свечение и hover.
 
