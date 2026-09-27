@@ -1,0 +1,65 @@
+# CentreOS — Obsidian theme
+
+Тема собрана из сниппетов CENTREOS (`obsidian theme cattpuccin.css`,
+`home page + daily notes.css`, `tablet-top-ribbon.css`), переписана на
+переменные Obsidian. Одна тема содержит **тёмную** (void + mauve) и
+**светлую** (paper) версии — переключаются штатной кнопкой темы.
+
+## Installation
+
+1. Скопируй папку `CentreOS` в `<vault>/.obsidian/themes/CentreOS/`
+   (файлы `theme.css` + `manifest.json`).
+   - На ПК: уже установлена в `Memory\.obsidian\themes\CentreOS\`.
+   - На телефоне/планшете: скопируй папку вручную (`.obsidian` не синкается).
+2. Obsidian → Settings → Appearance → Themes → выбери **CentreOS**.
+3. Dark/Light — кнопкой темы (или `app.vault.setConfig('theme','obsidian'|'moonstone')`).
+
+> Примечание: BRAT устанавливает только **плагины**, темы он не умеет.
+> Файлы из релиза (`theme.css` + `manifest.json`) — это ровно то, что нужно
+> для ручной установки темы (и для публикации в community themes).
+
+## Changelog
+
+### 1.0.0
+- Единая тема из трёх CENTREOS-сниппетов, переписана на переменные Obsidian.
+- Тёмная (void + mauve/blue/green) и светлая (paper) версии в одном файле.
+- Компоненты сохранены: `hud-card`, `habit-card` (active/failed/neutral),
+  `rpg-card`, `skill-*`, `inventory-*`, `avatar-frame`, `character-nick`,
+  `hud-mini-btn`, `handwriting-link-btn`, прогресс-бары.
+- Планшетный верхний ribbon, адаптив `dashboard-phone` / `dashboard-tablet`.
+- Доступность: `:focus-visible`, `prefers-reduced-motion`.
+
+## Формат и структура
+
+- `manifest.json` — имя/версия/автор темы.
+- `theme.css` — единственный файл темы:
+  - `:root` — шрифты и радиусы;
+  - `body.theme-dark` — тёмная палитра (все переменные Obsidian);
+  - `body.theme-light` — светлая палитра (те же акценты, читаемые на белом);
+  - база (типографика, заголовки капсом, ссылки, списки/чекбоксы, цитаты,
+    код, таблицы, теги);
+  - chrome (вкладки, лента, сайдбар, статусбар, скроллбары, модалки/меню);
+  - компоненты CENTREOS;
+  - адаптив и планшетный ribbon;
+  - доступность.
+
+## Палитра
+
+| Роль | Тёмная | Светлая |
+|---|---|---|
+| background | `#0d0d1c` | `#ffffff` |
+| secondary  | `#0a0a16` | `#f3f1f9` |
+| card       | `#18182a` | `#ffffff` |
+| primary (mauve) | `#d1abfd` | `#7b4ddb` |
+| secondary (blue) | `#85b7eb` | `#2f6fb5` |
+| tertiary (green) | `#5dcaa5` | `#12876a` |
+| danger | `#f07070` | `#cf4040` |
+| text | `#e6e3fa` | `#1c1a2e` |
+
+## Правки
+
+- Цвета — в блоках `body.theme-dark` / `body.theme-light`.
+- Заголовки (капс, межбуквенный интервал, свечение) — секция HEADINGS.
+- Компоненты — секция CENTREOS COMPONENTS (классы сохранены как в сниппетах).
+
+Автор: Ilmir.
