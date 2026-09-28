@@ -1,24 +1,29 @@
 # CentreOS — Obsidian theme
 
-Тема собрана из сниппетов CENTREOS (`obsidian theme cattpuccin.css`,
-`home page + daily notes.css`, `tablet-top-ribbon.css`), переписана на
-переменные Obsidian. Одна тема содержит **тёмную** (void + mauve) и
-**светлую** (paper) версии — переключаются штатной кнопкой темы.
+Тема для Obsidian: **тёмная** (void + mauve) и **светлая** (paper) в одном файле,
+переключаются штатной кнопкой темы. Собрана из сниппетов CENTREOS
+(`obsidian theme cattpuccin.css`, `home page + daily notes.css`, `tablet-top-ribbon.css`)
+и переписана на переменные Obsidian.
 
-## Installation
+## Установка
 
-1. Скопируй папку `CentreOS` в `<vault>/.obsidian/themes/CentreOS/`
-   (файлы `theme.css` + `manifest.json`).
-   - На ПК: уже установлена в `Memory\.obsidian\themes\CentreOS\`.
-   - На телефоне/планшете: скопируй папку вручную (`.obsidian` не синкается).
-2. Obsidian → Settings → Appearance → Themes → выбери **CentreOS**.
-3. Dark/Light — кнопкой темы.
+### Через BRAT (рекомендуется)
+1. В Obsidian установи плагин **BRAT** (Beta Reviewers Auto-update Tool).
+2. Открой настройки BRAT → **Add Beta theme** → вставь `and50005000/theme_obsidian`.
+3. Settings → Appearance → Themes → выбери **CentreOS**.
+4. Обновления — кнопкой **Check for updates** в BRAT.
 
-> BRAT устанавливает только **плагины**, темы он не умеет. Файлы из релиза
-> (`theme.css` + `manifest.json`) — это ровно то, что нужно для ручной установки.
+### Вручную
+1. Скопируй папку в `<vault>/.obsidian/themes/CentreOS/` (файлы `theme.css` + `manifest.json`).
+   - На ПК уже установлена в `Memory\.obsidian\themes\CentreOS\`.
+   - На телефоне/планшете скопируй папку вручную (`.obsidian` не синкается) — либо через BRAT.
+2. Settings → Appearance → Themes → выбери **CentreOS**.
+
+## Репозиторий и релизы
+- GitHub: `and50005000/theme_obsidian`
+- Ассеты релиза: `theme.css` + `manifest.json`. Тег = значение `version` в `manifest.json`.
 
 ## Changelog
-
 
 ### 1.0.4
 - Добавлена **базовая раскладка дашборда** (`.dashboard-grid`, `.col-left`/`.col-right`, `.tablet-two-col`/`.tablet-three-col`): на ноутбуке/десктопе Home Page снова двухколоночный (левая колонка `1fr`, правая `2fr`). Блок phone/tablet ниже по-прежнему складывает всё в один столбец.
