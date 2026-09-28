@@ -912,3 +912,11 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .dashboard-laptop .dash-2col{grid-template-columns:1fr !important}
 .dashboard-laptop .dash-3col{grid-template-columns:1fr !important}
 .dashboard-laptop .col-left,.dashboard-laptop .col-right{width:100%}
+/* ============================================================
+   COLLAPSIBLE DASHBOARD CARDS (click a header to hide/show)
+   ============================================================ */
+.dash-hidden{display:none !important}
+.dash-toggle{cursor:pointer;user-select:none;-webkit-user-select:none}
+.dash-toggle::after{content:"\25BE";margin-left:8px;opacity:.55;font-size:.9em}
+.dash-toggle.is-collapsed::after{content:"\25B8"}
+.dash-body{display:flex;flex-direction:column;gap:10px}
