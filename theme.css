@@ -904,3 +904,11 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .dashboard-laptop .dash-2col{grid-template-columns:1fr}
 .dashboard-laptop .dash-3col{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:1200px){.dashboard-laptop .dash-3col{grid-template-columns:1fr}}
+/* ============================================================
+   VERTICAL LAYOUT (single column) - every card gets the full
+   width, per reader request ("make them all vertical")
+   ============================================================ */
+.dashboard-laptop .dashboard-grid{grid-template-columns:1fr !important}
+.dashboard-laptop .dash-2col{grid-template-columns:1fr !important}
+.dashboard-laptop .dash-3col{grid-template-columns:1fr !important}
+.dashboard-laptop .col-left,.dashboard-laptop .col-right{width:100%}
