@@ -942,3 +942,10 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .inventory-list-item.dash-ddl-warm{border-left:3px solid var(--c-orange)}
 .dash-ddl-over .inventory-item-status,.dash-ddl-hot .inventory-item-status{color:var(--c-danger);border-color:color-mix(in srgb,var(--c-danger) 35%,transparent);background:color-mix(in srgb,var(--c-danger) 12%,transparent)}
 .dash-ddl-warm .inventory-item-status{color:var(--c-orange);border-color:color-mix(in srgb,var(--c-orange) 35%,transparent);background:color-mix(in srgb,var(--c-orange) 12%,transparent)}
+/* ============================================================
+   DAILY CHECKER CARD - counter, progress bar, habits grid
+   ============================================================ */
+.centreos-daily-checker .hud-header{display:flex;align-items:center;gap:10px}
+.centreos-daily-checker .dc-counter{margin-left:auto;font-family:var(--font-monospace);font-size:.8em;color:var(--c-tertiary);opacity:.9}
+.centreos-daily-checker .dc-bar{margin:8px 0 14px}
+.centreos-daily-checker .centreos-habits-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
