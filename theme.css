@@ -949,3 +949,26 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .centreos-daily-checker .dc-counter{margin-left:auto;font-family:var(--font-monospace);font-size:.8em;color:var(--c-tertiary);opacity:.9}
 .centreos-daily-checker .dc-bar{margin:8px 0 14px}
 .centreos-daily-checker .centreos-habits-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+/* ============================================================
+   CYBER TEMPORAL - neon grid, scanline, glow dates, timeline bar
+   ============================================================ */
+.dash-temp.cyber .cyber-wrap{position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--c-primary) 35%,transparent);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,color-mix(in srgb,var(--c-primary) 7%,transparent),transparent)}
+.dash-temp.cyber .cyber-wrap::before{content:"";position:absolute;inset:0;background-image:linear-gradient(color-mix(in srgb,var(--c-primary) 8%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--c-primary) 8%,transparent) 1px,transparent 1px);background-size:18px 18px;opacity:.45;pointer-events:none}
+.dash-temp.cyber .cyber-scan{position:absolute;left:0;right:0;height:22px;top:-22px;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--c-tertiary) 25%,transparent),transparent);animation:cyberScan 4.5s linear infinite;pointer-events:none}
+@keyframes cyberScan{0%{top:-22px}100%{top:100%}}
+.dash-temp.cyber .cyber-row{margin:6px 0}
+.dash-temp.cyber .cyber-tag{font-family:var(--font-monospace);font-size:10px;font-weight:700;letter-spacing:2px;padding:2px 8px;border-radius:4px}
+.dash-temp.cyber .cyber-past{color:var(--c-secondary);border:1px solid color-mix(in srgb,var(--c-secondary) 35%,transparent);background:color-mix(in srgb,var(--c-secondary) 10%,transparent)}
+.dash-temp.cyber .cyber-nowtag{color:var(--c-primary);border:1px solid color-mix(in srgb,var(--c-primary) 45%,transparent);background:color-mix(in srgb,var(--c-primary) 12%,transparent)}
+.dash-temp.cyber .cyber-future{color:var(--c-tertiary);border:1px solid color-mix(in srgb,var(--c-tertiary) 35%,transparent);background:color-mix(in srgb,var(--c-tertiary) 10%,transparent)}
+.dash-temp.cyber .dash-row-label{color:var(--text-muted)}
+.dash-temp.cyber .dash-row-val{font-family:var(--font-monospace);letter-spacing:1px}
+.cyber-past{color:var(--c-secondary) !important;text-shadow:0 0 8px color-mix(in srgb,var(--c-secondary) 50%,transparent)}
+.cyber-nowval{color:var(--c-primary) !important;text-shadow:0 0 10px color-mix(in srgb,var(--c-primary) 65%,transparent)}
+.cyber-future{color:var(--c-tertiary) !important;text-shadow:0 0 8px color-mix(in srgb,var(--c-tertiary) 50%,transparent)}
+.dash-temp.cyber .cyber-timeline{position:relative;height:10px;margin-top:14px;border-radius:6px;background:linear-gradient(90deg,color-mix(in srgb,var(--c-secondary) 25%,transparent),color-mix(in srgb,var(--c-primary) 30%,transparent),color-mix(in srgb,var(--c-tertiary) 25%,transparent))}
+.dash-temp.cyber .cyber-mark{position:absolute;top:-3px;width:3px;height:16px;border-radius:2px}
+.dash-temp.cyber .cyber-m-past{left:0;background:var(--c-secondary);box-shadow:0 0 8px var(--c-secondary)}
+.dash-temp.cyber .cyber-m-now{left:50%;background:var(--c-primary);box-shadow:0 0 10px var(--c-primary);animation:cyberPulse 1.6s ease-in-out infinite}
+.dash-temp.cyber .cyber-m-future{right:0;background:var(--c-tertiary);box-shadow:0 0 8px var(--c-tertiary)}
+@keyframes cyberPulse{0%,100%{opacity:1}50%{opacity:.45}}
