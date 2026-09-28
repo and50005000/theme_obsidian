@@ -19,6 +19,12 @@
 
 ## Changelog
 
+
+### 1.0.4
+- Добавлена **базовая раскладка дашборда** (`.dashboard-grid`, `.col-left`/`.col-right`, `.tablet-two-col`/`.tablet-three-col`): на ноутбуке/десктопе Home Page снова двухколоночный (левая колонка `1fr`, правая `2fr`). Блок phone/tablet ниже по-прежнему складывает всё в один столбец.
+- Home-страницы теперь регистрируют **device-классы** `.dashboard-laptop` / `.dashboard-phone` — благодаря этому адаптивные правила темы реально применяются (раньше они не срабатывали).
+- Базовые стили `details.mobile-collapsible` перенесены на уровень темы, а не только внутри `.dashboard-phone`.
+
 ### 1.0.2
 - Селекторы кнопок уточнены (`.centreos-dashboard .tech-button-main`), чтобы стили Obsidian не перебивали тему — кнопка `OPEN_DAILY_NOTE` снова горит.
 
