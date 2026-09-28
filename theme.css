@@ -972,3 +972,6 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .dash-temp.cyber .cyber-m-now{left:50%;background:var(--c-primary);box-shadow:0 0 10px var(--c-primary);animation:cyberPulse 1.6s ease-in-out infinite}
 .dash-temp.cyber .cyber-m-future{right:0;background:var(--c-tertiary);box-shadow:0 0 8px var(--c-tertiary)}
 @keyframes cyberPulse{0%,100%{opacity:1}50%{opacity:.45}}
+/* STATIC CYBER TEMPORAL: no animations (per reader request) */
+.dash-hourglass,.cyber-scan{display:none !important}
+.dash-temp.cyber .cyber-m-now{animation:none !important}
