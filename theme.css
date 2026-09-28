@@ -892,3 +892,15 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 @media (max-width:1500px){.dashboard-laptop .dash-3col{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:1250px){.dashboard-laptop .dashboard-grid{grid-template-columns:1fr}.dashboard-laptop .dash-3col{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:820px){.dashboard-laptop .dash-3col{grid-template-columns:1fr}.dashboard-laptop .dash-2col{grid-template-columns:1fr}}
+/* ============================================================
+   FULL-WIDTH DASHBOARD - override "Readable line length" so the
+   cards get the whole window (cards were too narrow)
+   ============================================================ */
+.centreos-dashboard .markdown-preview-sizer,
+.centreos-dashboard .cm-sizer,
+.centreos-dashboard .markdown-preview-sizer > div,
+.centreos-dashboard .markdown-embed-content{max-width:none !important}
+.centreos-dashboard .dashboard-grid{max-width:none}
+.dashboard-laptop .dash-2col{grid-template-columns:1fr}
+.dashboard-laptop .dash-3col{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:1200px){.dashboard-laptop .dash-3col{grid-template-columns:1fr}}
