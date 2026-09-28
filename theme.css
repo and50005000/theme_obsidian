@@ -920,3 +920,25 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .dash-toggle::after{content:"\25BE";margin-left:8px;opacity:.55;font-size:.9em}
 .dash-toggle.is-collapsed::after{content:"\25B8"}
 .dash-body{display:flex;flex-direction:column;gap:10px}
+/* ============================================================
+   DASHBOARD: aligned percents, desk hourglass, live clock, deadlines
+   ============================================================ */
+.dash-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.dash-row-label{font-size:.95em;letter-spacing:1px;opacity:.85}
+.dash-row-val{font-weight:700;font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
+.dash-muted{opacity:.55;font-size:.85em}
+.dash-empty{padding:8px 4px;opacity:.5;font-size:.85em}
+.dash-hourglass{position:relative;width:42px;height:58px;margin:2px auto 8px}
+.dash-hourglass .hg-glass{position:absolute;inset:0;border:2px solid var(--c-primary);border-radius:8px;opacity:.35}
+.dash-hourglass .hg-sand-top{position:absolute;left:5px;right:5px;top:5px;height:20px;background:linear-gradient(180deg,var(--c-primary),var(--c-primary-dim));clip-path:polygon(0 0,100% 0,50% 100%);animation:hgTop 6s linear infinite}
+.dash-hourglass .hg-stream{position:absolute;left:50%;top:44%;width:2px;height:12px;margin-left:-1px;background:var(--c-primary);opacity:.9;animation:hgStream 6s linear infinite}
+.dash-hourglass .hg-sand-bot{position:absolute;left:5px;right:5px;bottom:5px;height:2px;background:var(--c-primary);clip-path:polygon(50% 0,100% 100%,0 100%);animation:hgBot 6s linear infinite}
+@keyframes hgTop{0%{height:20px}100%{height:0}}
+@keyframes hgBot{0%{height:2px}100%{height:20px}}
+@keyframes hgStream{0%,85%{opacity:.9}100%{opacity:0}}
+.dash-clock{font-family:var(--font-monospace);font-size:1.05em;letter-spacing:2px;opacity:.85;margin-bottom:8px}
+.inventory-list-item.dash-ddl-over{border-left:3px solid var(--c-danger)}
+.inventory-list-item.dash-ddl-hot{border-left:3px solid var(--c-danger)}
+.inventory-list-item.dash-ddl-warm{border-left:3px solid var(--c-orange)}
+.dash-ddl-over .inventory-item-status,.dash-ddl-hot .inventory-item-status{color:var(--c-danger);border-color:color-mix(in srgb,var(--c-danger) 35%,transparent);background:color-mix(in srgb,var(--c-danger) 12%,transparent)}
+.dash-ddl-warm .inventory-item-status{color:var(--c-orange);border-color:color-mix(in srgb,var(--c-orange) 35%,transparent);background:color-mix(in srgb,var(--c-orange) 12%,transparent)}
