@@ -468,7 +468,6 @@ a.tag:hover { background: var(--tag-background-hover); }
    ============================================================ */
 
 .centreos-dashboard {
-  --c-primary: var(--c-primary);
   font-family: var(--font-ui);
   color: var(--text-normal);
 }
