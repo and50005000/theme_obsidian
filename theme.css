@@ -831,6 +831,9 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 
 /* ============================================================
    TABLET / MOBILE TOP RIBBON (optional, from the snippet)
+   Drawn only when the ribbon actually contains action buttons;
+   an empty ribbon no longer leaves a blank band above the tab
+   bar (fixed in 1.2.1).
    ============================================================ */
 .is-mobile .workspace-ribbon.side-dock-ribbon,
 .is-tablet .workspace-ribbon.side-dock-ribbon {
@@ -853,7 +856,10 @@ details.motivation-reminder[open] summary { border-color: var(--c-danger); backg
 .is-tablet .workspace-ribbon.side-dock-ribbon .side-dock-ribbon-action {
   display: inline-flex; margin: 0 4px; padding: 8px;
 }
-.is-mobile .app-container, .is-tablet .app-container { padding-top: 50px; }
+.is-mobile .workspace-ribbon.side-dock-ribbon:not(:has(.side-dock-ribbon-action)),
+.is-tablet .workspace-ribbon.side-dock-ribbon:not(:has(.side-dock-ribbon-action)) { display: none; }
+.is-mobile .app-container:has(.workspace-ribbon.side-dock-ribbon .side-dock-ribbon-action),
+.is-tablet .app-container:has(.workspace-ribbon.side-dock-ribbon .side-dock-ribbon-action) { padding-top: 50px; }
 
 /* ============================================================
    ACCESSIBILITY
